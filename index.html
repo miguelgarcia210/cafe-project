@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f50fcf1d06.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link " href="#">Code Cafe<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Order Online</a>
+                <a class="nav-item nav-link" href="#">Menu</a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find a cafe near you!</button>
+                </form>
+            </div>
+
+            <div class="navbar-nav ml-auto">
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle" style="background-color: transparent" href="#" role="button"
+                       id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <form class="px-4 py-3">
+                            <div class="form-group">
+                                <label for="exampleDropdownFormEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                                       placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleDropdownFormPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                                       placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                    <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">New around here? Sign up</a>
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Code Cafe!</h1>
+            <p class="lead"></p>
+        </div>
+    </div>
+    <!-- JUMBOTRON -->
+
+    <!-- NAVIGATION -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+               aria-selected="false">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages"
+               aria-selected="false">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+               aria-selected="false">Create</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- HOME PAGE -->
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            Our Home Page
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+        </div>
+
+        <!-- COFFEE MENU -->
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Coffee Menu
+                </div>
+                <div class="card-body">
+                    <div class="card mb-3" style="width: 100%;">
+                        <div class="card-header">
+                            Our menu is dynamically updated upon submissions.
+                        </div>
+                        <form class="form-inline">
+                            <label for="roast-selection">Roast</label>
+                            <select id="roast-selection">
+                                <option selected>--- Select Roast ---</option>
+                                <option>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <label for="coffeeEntered">Coffee Name</label>
+                            <input type="text" name="coffeeEntered" id="coffeeEntered">
+                            <input id="submit" type="submit" class="btn btn-outline-success my-2 my-sm-0"/>
+                        </form>
+                        <section id="coffees">
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CREATE NEW COFFEE -->
+        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <div class="card">
+                <div class="card-header  bg-primary text-white">
+                    Coffee Creator
+                </div>
+                <div class="card-body">
+                    <div class="card mb-3" style="width: 100%;">
+                        <div class="card-header">
+                            Develop your perfect coffee!
+                        </div>
+                        <form>
+                            <label for="new-roast-selection">Roast</label>
+                            <select id="new-roast-selection">
+                                <option selected>--- Select Roast ---</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <label for="new-coffee-name">Name</label>
+                            <input type="text" name="coffeeEntered" id="new-coffee-name">
+                            <input id="new-coffee-submit" type="submit" class="btn btn-outline-success my-2 my-sm-0">
+                        </form>
+                        <section id="new-coffees">
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<!-- CUSTOM JS -->
+<script src="main.js"></script>
+</body>
+</html>
